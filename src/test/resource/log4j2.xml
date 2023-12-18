@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="basePath">C:/Users/User/IdeaProjects/Rest_Assure_pet_store</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+        <RollingFile name="File" fileName="${basePath}/automation.log"
+                     filePattern="${basePath}/automation-%d{yyyy-MM-dd}">
+            <SizeBasedTriggeringPolicy size="500000" />
+            <DefaultRolloverStrategy max="10"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSSS} [%t] %-5level %logger{36} - %msg%n" />
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Root>
+    </Loggers>
+</Configuration>
+
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+        <!--<Configuration  status ="WARN">-->
+        <!--    <Properties>-->
+        <!--        <Property name  ='basePath'>.src/test/loger</Property>-->
+        <!--    </Properties>-->
+
+        <!--    <Appenders>-->
+        <!--        <Console name="Console" target="SYSTEM_OUT">-->
+        <!--            <PatternLayout pattern="%d{HH:mm:ss.SSSS} [%t] %-5level %lgger{36} -%msg%n"></PatternLayout>-->
+        <!--        </Console>-->
+
+        <!--        <RollingFile name="File" fileName="${basePath}/automation.log" filePattern="${basePath}/automation-%d{yyyy-mm-dd}">-->
+        <!--            <SizeBasedTriggeringPolicy size="500000"></SizeBasedTriggeringPolicy>-->
+
+        <!--        </RollingFile>-->
+
+        <!--    </Appenders>-->
+        <!--<Loggers>-->
+        <!--    <Root level="debug">-->
+        <!--        <AppenderRef ref="File"></AppenderRef>-->
+        <!--    </Root>-->
+        <!--</Loggers>-->
+
+
+        <!--</Configuration>-->
